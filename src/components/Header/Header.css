@@ -1,0 +1,131 @@
+:root {
+  --main-blue: #288fa7;
+  --main-bg: #353b48;
+  --main-text: #fff;
+}
+
+.header {
+  height: 100vh;
+  color: var(--main-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.header__content {
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.header__content-welcomeText {
+  font-size: 3.5rem;
+  letter-spacing: 0.3rem;
+  position: relative;
+}
+
+.header__content-socials__wrapper {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.header__content-socials__wrapper > .MuiSvgIcon-root {
+  margin: 0 15px;
+  font-size: 2rem;
+  color: var(--main-blue);
+  cursor: pointer;
+  transition: color 600ms ease;
+}
+
+.header__content-socials__wrapper > .MuiSvgIcon-root:hover {
+  color: #48dbdf;
+}
+
+.header__content-buttons__wrapper {
+  margin-top: 20px;
+}
+
+.header__content-buttons__wrapper > button {
+  margin: 0 20px;
+  height: 40px;
+  width: 150px;
+  font-size: 1.1rem;
+}
+
+.header__content-buttons__wrapper > button:first-of-type {
+  background-color: var(--main-blue);
+  color: var(--main-text);
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  transition: all 500ms ease;
+  cursor: pointer;
+}
+
+.header__content-buttons__wrapper > button:first-of-type:hover {
+  background-color: transparent;
+  border: 1px solid #48dbdf;
+  box-shadow: 0 1px 6px #48dbdf;
+}
+
+.header__content-buttons__wrapper > button:nth-of-type(2) {
+  background-color: transparent;
+  box-shadow: 0 1px 6px #48dbdf;
+  border: 1px solid #48dbdf;
+  color: #48dbdf;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 500ms ease;
+  cursor: pointer;
+}
+
+.header__content-buttons__wrapper > button:nth-of-type(2):hover {
+  background-color: var(--main-blue);
+  border: none;
+  box-shadow: none;
+  color: var(--main-text);
+}
+
+.waves {
+  position: absolute;
+  bottom: 0;
+}
+
+@media (max-width: 688px) {
+  .header__content-welcomeText {
+    font-size: 2rem;
+  }
+
+  .header__content-buttons__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__content-buttons__wrapper > button {
+    margin-bottom: 20px;
+  }
+}

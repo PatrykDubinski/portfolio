@@ -1,0 +1,42 @@
+.backToTop {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #22262e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.backToTop > i {
+  font-size: 1.6rem;
+  color: #288fa7;
+}
+
+.arrow {
+  transition: all 0.5s ease;
+}
+
+.arrow-enter {
+  transition: all 0.5s ease;
+  transform: translateX(-200px);
+}
+
+.arrow-enter-active {
+  transform: translateX(200px);
+  transition: all 0.5s ease-in-out;
+}
+
+.arrow-exit {
+  transform: translateX(200px);
+}
+
+.arrow-exit-active {
+  transform: translateX(200px);
+  transition: all 0.5s ease-in-out;
+}

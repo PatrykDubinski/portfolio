@@ -1,0 +1,28 @@
+.singleTech {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.singleTech__image {
+  background-color: #288fa7;
+  color: white;
+  width: 125px;
+  height: 125px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.singleTech__image > svg {
+  font-size: 5rem;
+}
+
+.singleTech > h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 10px;
+}
