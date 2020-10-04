@@ -157,3 +157,13 @@
     font-size: 2.6rem;
   }
 }
+
+@media (min-width: 1750px) {
+  .about {
+    padding: 330px 40px 300px 40px;
+  }
+
+  .about > h2 {
+    margin-top: 225px;
+  }
+}

@@ -329,3 +329,18 @@
     width: 100%;
   }
 }
+
+@media (min-width: 993px) {
+  .form__wrapper > form {
+    width: 80%;
+  }
+
+  .form__wrapper > form > .top__form > .input-wrapper {
+    width: 40%;
+  }
+
+  .form__wrapper > form > .top__form > .input-wrapper > input {
+    width: 100%;
+    min-width: unset;
+  }
+}
