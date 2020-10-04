@@ -46,9 +46,23 @@ const Header = () => {
           <p className="under"></p>
         </h1>
         <div className="header__content-socials__wrapper">
-          <FacebookIcon />
-          <GitHubIcon />
-          <LinkedIcon />
+          <a
+            href="https://pl-pl.facebook.com/people/Patryk-Dubi%C5%84ski/100003542379310"
+            alt="facebook"
+            target="_blank"
+          >
+            <FacebookIcon />
+          </a>
+          <a
+            href="https://github.com/PatrykDubinski"
+            alt="github"
+            target="_blank"
+          >
+            <GitHubIcon />
+          </a>
+          <a href="https://pl.linkedin.com/" alt="linkedin" target="_blank">
+            <LinkedIcon />
+          </a>
         </div>
         <div className="header__content-buttons__wrapper">
           <button onClick={contactHandler}>Contact me</button>
