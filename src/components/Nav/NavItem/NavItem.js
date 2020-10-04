@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const NavItem = ({ itemName, children }) => {
   const handleNav = () => {
@@ -10,7 +11,11 @@ const NavItem = ({ itemName, children }) => {
       });
     }
   };
-  return <li onClick={handleNav}>{children}</li>;
+  return (
+    <NavLink to={`/${itemName}`} className="li">
+      <li onClick={handleNav}>{children}</li>
+    </NavLink>
+  );
 };
 
 export default NavItem;

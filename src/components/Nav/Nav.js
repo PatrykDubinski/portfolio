@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Nav.css";
 
 import NavItem from "./NavItem/NavItem";
@@ -10,13 +10,20 @@ const Nav = () => {
     setMenu(!menu);
   };
 
-  window.addEventListener("scroll", () => {
+  const handleScroll = () => {
     if (window.scrollY > 20) {
       document.querySelector(".nav").classList.add("sticky");
     } else {
       document.querySelector(".nav").classList.remove("sticky");
     }
-  });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <nav className="nav">

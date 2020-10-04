@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import ScrollableSection from "react-update-url-on-scroll";
 
 import About from "./components/About/About";
 import BackToTop from "./components/BackToTop/BackToTop";
@@ -8,6 +10,7 @@ import Header from "./components/Header/Header";
 import Projects from "./components/Projects/Projects";
 import Socials from "./components/Socials/Socials";
 import Tech from "./components/Tech/Tech";
+import ProjectInfo from "./components/ProjectInfo/ProjectInfo";
 
 function App() {
   const [scroll, setScroll] = useState(null);
@@ -26,13 +29,22 @@ function App() {
 
   return (
     <div className="app">
-      <Header />
-      <About />
-      <Projects />
-      <Tech />
-      <Contact />
-      <Socials />
-      <BackToTop visible={visible} />
+      <Router>
+        <Switch>
+          <Route path="/projects/:slug" exact>
+            <ProjectInfo />
+          </Route>
+          <Route path="/">
+            <Header />
+            <About />
+            <Projects />
+            <Tech />
+            <Contact />
+            <Socials />
+            <BackToTop visible={visible} />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

@@ -25,15 +25,17 @@
   flex-direction: column;
 }
 
-.nav > .smallNav > .smallNav__navItems > li {
+.nav > .smallNav > .smallNav__navItems > .li {
   height: 50px;
   text-transform: uppercase;
   font-size: 1.4rem;
   line-height: 50px;
   transition: all 0.5s ease-in-out;
+  color: #f1f1f1;
+  text-decoration: none;
 }
 
-.nav > .smallNav > .smallNav__navItems > li:hover {
+.nav > .smallNav > .smallNav__navItems > .li:hover {
   cursor: pointer;
   background-color: #288fa7;
   color: #22262e;
@@ -62,8 +64,9 @@
   color: black;
 }
 
-.nav.sticky > .nav__navItems > li {
+.nav.sticky > .nav__navItems > .li {
   border-color: black;
+  color: black;
 }
 
 .nav > .nav__navItems {
@@ -73,7 +76,7 @@
   list-style-type: none;
 }
 
-.nav > .nav__navItems > li {
+.nav > .nav__navItems > .li {
   margin: 0 20px;
   padding: 0 10px;
   height: 35px;
@@ -83,9 +86,11 @@
   cursor: pointer;
   position: relative;
   transition: all 400ms ease-in-out;
+  color: #f1f1f1;
+  text-decoration: none;
 }
 
-.nav > .nav__navItems > li::before {
+.nav > .nav__navItems > .li::before {
   content: "";
   position: absolute;
   top: 0;
@@ -100,7 +105,7 @@
   transform: scaleX(0);
 }
 
-.nav > .nav__navItems > li:hover::before {
+.nav > .nav__navItems > .li:hover::before {
   transform: scaleX(1);
 }
 
@@ -182,7 +187,7 @@
 }
 
 @media (max-width: 992px) and (min-width: 689px) {
-  .nav > .nav__navItems > li {
+  .nav > .nav__navItems > .li {
     margin: 0 15px;
   }
 }

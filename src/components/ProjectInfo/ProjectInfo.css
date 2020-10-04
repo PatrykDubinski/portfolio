@@ -1,0 +1,58 @@
+.projectInfo {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectInfo__wrapper {
+  width: 100%;
+  height: 70vh;
+}
+
+.projectInfo__wrapper-slider {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.projectInfo__wrapper-slider > .arrowUp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 20px;
+}
+
+.projectInfo__wrapper-slider > .arrowUp > svg,
+.projectInfo__wrapper-slider > .arrowDown > svg {
+  width: 100%;
+  height: 100%;
+}
+
+.projectInfo__wrapper-slider > .arrowDown {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.projectInfo__wrapper-slider > .slide {
+  min-height: 100%;
+  margin: 20px 0;
+}
+
+.projectInfo__wrapper-slider > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
