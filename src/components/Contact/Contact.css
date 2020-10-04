@@ -296,3 +296,36 @@
     font-size: 0.8rem;
   }
 }
+
+@media (min-width: 689px) and (max-width: 992px) {
+  .contact > h2 {
+    font-size: 2rem;
+  }
+
+  .contact > .contact-boxes {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-boxes > .contact-box {
+    width: 60%;
+    margin-bottom: 20px;
+  }
+
+  .form__wrapper > form {
+    width: 80%;
+  }
+
+  .form__wrapper > form > .top__form > .input-wrapper > input {
+    min-width: unset;
+  }
+
+  .form__wrapper > form > .subject-wrapper {
+    min-width: unset;
+  }
+
+  .form__wrapper > form > button {
+    width: 100%;
+  }
+}

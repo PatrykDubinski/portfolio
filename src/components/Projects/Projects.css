@@ -44,3 +44,9 @@
     font-size: 2.3rem;
   }
 }
+
+@media (min-width: 689px) and (max-width: 992px) {
+  .projects > h2 {
+    font-size: 2.6rem;
+  }
+}

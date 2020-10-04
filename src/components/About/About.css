@@ -143,3 +143,17 @@
     padding: 300px 20px 220px 15px;
   }
 }
+
+@media (max-width: 992px) and (min-width: 689px) {
+  .about {
+    padding: 300px 20px 220px 20px;
+  }
+
+  .about__left {
+    width: 107%;
+  }
+
+  .about > h2 {
+    font-size: 2.6rem;
+  }
+}

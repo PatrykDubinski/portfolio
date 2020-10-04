@@ -180,3 +180,9 @@
     transform: translateX(0);
   }
 }
+
+@media (max-width: 992px) and (min-width: 689px) {
+  .nav > .nav__navItems > li {
+    margin: 0 15px;
+  }
+}

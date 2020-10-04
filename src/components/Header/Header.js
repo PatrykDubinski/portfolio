@@ -50,6 +50,7 @@ const Header = () => {
             href="https://pl-pl.facebook.com/people/Patryk-Dubi%C5%84ski/100003542379310"
             alt="facebook"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <FacebookIcon />
           </a>
@@ -57,10 +58,16 @@ const Header = () => {
             href="https://github.com/PatrykDubinski"
             alt="github"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <GitHubIcon />
           </a>
-          <a href="https://pl.linkedin.com/" alt="linkedin" target="_blank">
+          <a
+            href="https://pl.linkedin.com/"
+            alt="linkedin"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <LinkedIcon />
           </a>
         </div>

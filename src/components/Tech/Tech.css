@@ -68,3 +68,17 @@
     padding: 30px;
   }
 }
+
+@media (min-width: 689px) and (max-width: 992px) {
+  .tech {
+    padding: 30px 15px;
+  }
+
+  .tech > h2 {
+    font-size: 2rem;
+  }
+
+  .tech__wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}

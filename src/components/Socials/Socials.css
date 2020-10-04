@@ -107,3 +107,9 @@
     position: absolute;
   }
 }
+
+@media (min-width: 689px) and (max-width: 992px) {
+  .socials > img {
+    position: absolute;
+  }
+}
