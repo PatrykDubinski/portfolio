@@ -1,41 +1,19 @@
 // Libraries import
 import React, { useEffect } from "react";
 import "./Header.css";
+import "animate.css/animate.min.css";
+import ScrollAnimation from "react-animate-on-scroll";
 
 // Tools imports
 import FacebookIcon from "@material-ui/icons/Facebook";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedIcon from "@material-ui/icons/LinkedIn";
 import bgImg from "../../assets/images/safar-safarov-MSN8TFhJ0is-unsplash.jpg";
-import Nav from "../Nav/Nav";
 
 // Components imports
+import Nav from "../Nav/Nav";
 
 const Header = () => {
-  // Typing name function
-  // let i = 0;
-  // const typeName = () => {
-  //   const changingText = document.querySelector(".welcomeText__changing");
-  //   const underText = document.querySelector(".under");
-  //   const text = "Patryk Frontend Developer";
-  //   if (i < 6) {
-  //     changingText.innerHTML += text.charAt(i);
-  //     i++;
-  //     setTimeout(typeName, 300);
-  //   } else {
-  //     underText.innerHTML += text.charAt(i);
-  //     i++;
-  //     setTimeout(typeName, 200);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("load", typeName);
-
-  //   return () => window.removeEventListener("load", typeName, true);
-  // }, [typeName]);
-  // End of typing name function
-
   const contactHandler = () => {
     const el = document.getElementById("contact");
     el.scrollIntoView({ behavior: "smooth" });
@@ -45,39 +23,49 @@ const Header = () => {
       <img src={bgImg} alt="Coding" className="header__background" />
       <Nav />
       <div className="header__content">
-        <h1 className="header__content-welcomeText">
-          Hello, I'm <span className="welcomeText__changing">Patryk</span>
-          <p className="under">Frontend Developer</p>
-        </h1>
-        <div className="header__content-socials__wrapper">
-          <a
-            href="https://pl-pl.facebook.com/people/Patryk-Dubi%C5%84ski/100003542379310"
-            alt="facebook"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FacebookIcon />
-          </a>
-          <a
-            href="https://github.com/PatrykDubinski"
-            alt="github"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <GitHubIcon />
-          </a>
-          <a
-            href="https://pl.linkedin.com/"
-            alt="linkedin"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <LinkedIcon />
-          </a>
-        </div>
+        <ScrollAnimation animateIn="animate__fadeInDown" duration={2}>
+          <h1 className="header__content-welcomeText">
+            Hello, I'm <span className="welcomeText__changing">Patryk</span>
+            <p className="under">Frontend Developer</p>
+          </h1>
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="animate__fadeIn" duration={2} delay={1000}>
+          <div className="header__content-socials__wrapper">
+            <a
+              href="https://pl-pl.facebook.com/people/Patryk-Dubi%C5%84ski/100003542379310"
+              alt="facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FacebookIcon />
+            </a>
+            <a
+              href="https://github.com/PatrykDubinski"
+              alt="github"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GitHubIcon />
+            </a>
+            <a
+              href="https://pl.linkedin.com/"
+              alt="linkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedIcon />
+            </a>
+          </div>
+        </ScrollAnimation>
         <div className="header__content-buttons__wrapper">
-          <button onClick={contactHandler}>Contact me</button>
-          <button>Download CV</button>
+          <ScrollAnimation animateIn="animate__bounceInLeft" delay={2000}>
+            <button className="contactBtn" onClick={contactHandler}>
+              Contact me
+            </button>
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="animate__bounceInRight" delay={2000}>
+            <button className="transparentBtn">Download CV</button>
+          </ScrollAnimation>
         </div>
       </div>
       <svg

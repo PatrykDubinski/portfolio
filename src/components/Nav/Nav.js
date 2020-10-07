@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Nav.css";
+import "animate.css/animate.min.css";
+import ScrollAnimation from "react-animate-on-scroll";
 
 import NavItem from "./NavItem/NavItem";
 
@@ -27,13 +29,24 @@ const Nav = () => {
 
   return (
     <nav className="nav">
-      <ul className="nav__navItems">
-        <NavItem itemName="about">About</NavItem>
-        <NavItem itemName="work">My work</NavItem>
-        <NavItem itemName="tech">Technologies</NavItem>
-        <NavItem itemName="contact">Contact me</NavItem>
-        <NavItem>Get my CV</NavItem>
-      </ul>
+      <ScrollAnimation
+        animateIn="animate__slideInDown"
+        duration={2}
+        delay={4000}
+        style={{
+          opacity: 1,
+          display: "flex",
+          animationName: "slideInDown",
+        }}
+      >
+        <ul className="nav__navItems">
+          <NavItem itemName="about">About</NavItem>
+          <NavItem itemName="work">My work</NavItem>
+          <NavItem itemName="tech">Technologies</NavItem>
+          <NavItem itemName="contact">Contact me</NavItem>
+          <NavItem>Get my CV</NavItem>
+        </ul>
+      </ScrollAnimation>
       <div
         onClick={menuToggler}
         className={`menuToggler ${menu ? "open" : null}`}

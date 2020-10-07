@@ -72,16 +72,17 @@
 
 .header__content-buttons__wrapper {
   margin-top: 20px;
+  display: flex;
 }
 
-.header__content-buttons__wrapper > button {
+.header__content-buttons__wrapper > div > button {
   margin: 0 20px;
   height: 40px;
   width: 150px;
   font-size: 1.1rem;
 }
 
-.header__content-buttons__wrapper > button:first-of-type {
+.header__content-buttons__wrapper > div > .contactBtn {
   background-color: var(--main-blue);
   color: var(--main-text);
   font-weight: 600;
@@ -91,13 +92,13 @@
   cursor: pointer;
 }
 
-.header__content-buttons__wrapper > button:first-of-type:hover {
+.header__content-buttons__wrapper > div > .contactBtn:hover {
   background-color: transparent;
   border: 1px solid #48dbdf;
   box-shadow: 0 1px 6px #48dbdf;
 }
 
-.header__content-buttons__wrapper > button:nth-of-type(2) {
+.header__content-buttons__wrapper > div > .transparentBtn {
   background-color: transparent;
   box-shadow: 0 1px 6px #48dbdf;
   border: 1px solid #48dbdf;
@@ -108,7 +109,7 @@
   cursor: pointer;
 }
 
-.header__content-buttons__wrapper > button:nth-of-type(2):hover {
+.header__content-buttons__wrapper > div > .transparentBtn:hover {
   background-color: var(--main-blue);
   border: none;
   box-shadow: none;
@@ -130,7 +131,7 @@
     flex-direction: column;
   }
 
-  .header__content-buttons__wrapper > button {
+  .header__content-buttons__wrapper > div > button {
     margin-bottom: 20px;
   }
 }

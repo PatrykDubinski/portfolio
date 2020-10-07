@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import ScrollableSection from "react-update-url-on-scroll";
 
 import About from "./components/About/About";
 import BackToTop from "./components/BackToTop/BackToTop";
