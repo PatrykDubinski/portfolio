@@ -118,6 +118,11 @@
   transform: translateY(-50%);
   left: 20px;
   pointer-events: none;
+  opacity: 1;
+}
+
+.form__wrapper > form > .top__form > .input-wrapper > .placeholder.hidden {
+  opacity: 0;
 }
 
 .form__wrapper
@@ -172,6 +177,11 @@
   transform: translateY(-50%);
   left: 20px;
   pointer-events: none;
+  opacity: 1;
+}
+
+.form__wrapper > form > .subject-wrapper > .placeholder.hidden {
+  opacity: 0;
 }
 
 .form__wrapper > form > .subject-wrapper > input:focus ~ .placeholder {
@@ -227,6 +237,28 @@
 
 .form__wrapper > form > button:hover {
   background-color: #2ac7cc;
+}
+
+.my-modal-enter {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.my-modal-enter-active {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+
+.my-modal-exit {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.my-modal-exit-active {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
 
 @media (max-width: 688px) {

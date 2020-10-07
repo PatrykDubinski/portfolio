@@ -5,54 +5,97 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 50px;
+  background-color: #353b48;
+}
+
+.projectInfo > h2 {
+  margin-bottom: 40px;
+  color: #f1f1f1;
+  font-size: 3rem;
+}
+
+.projectInfo > .wrapper {
+  display: flex;
 }
 
 .projectInfo__wrapper {
-  width: 100%;
-  height: 70vh;
-}
-
-.projectInfo__wrapper-slider {
   width: 35%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  margin-right: auto;
+  border: 5px solid black;
   overflow: hidden;
   position: relative;
-  padding-bottom: 40px;
 }
 
-.projectInfo__wrapper-slider > .arrowUp {
+.projectInfo__wrapper-slide {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 500px;
+}
+
+.projectInfo__wrapper-slide > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.projectInfo__wrapper > .arrowUp {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
-  height: 20px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 2;
 }
 
-.projectInfo__wrapper-slider > .arrowUp > svg,
-.projectInfo__wrapper-slider > .arrowDown > svg {
+.projectInfo__wrapper > .arrowUp:hover > svg {
+  animation: arrowUp 0.3s infinite alternate;
+}
+
+@keyframes arrowUp {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+}
+
+.projectInfo__wrapper > .arrowDown:hover > svg {
+  animation: arrowDown 0.5s infinite;
+}
+
+.projectInfo__wrapper > .arrowUp > svg,
+.projectInfo__wrapper > .arrowDown > svg {
   width: 100%;
   height: 100%;
+  fill: #f1f1f1;
+  transition: all 0.5s ease;
 }
 
-.projectInfo__wrapper-slider > .arrowDown {
+.projectInfo__wrapper > .arrowDown {
   position: absolute;
+  z-index: 2;
   width: 100%;
-  height: 20px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  height: 30px;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-.projectInfo__wrapper-slider > .slide {
-  min-height: 100%;
-  margin: 20px 0;
-}
-
-.projectInfo__wrapper-slider > div > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.projectInfo__desc {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  transition: all 0.5s ease-in-out;
+  color: #e2e2e2;
 }

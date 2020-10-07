@@ -1,5 +1,5 @@
 // Libraries import
-import React from "react";
+import React, { useEffect } from "react";
 import "./Header.css";
 
 // Tools imports
@@ -13,23 +13,27 @@ import Nav from "../Nav/Nav";
 
 const Header = () => {
   // Typing name function
-  let i = 0;
-  const typeName = () => {
-    const changingText = document.querySelector(".welcomeText__changing");
-    const underText = document.querySelector(".under");
-    const text = "Patryk Frontend Developer";
-    if (i < 6) {
-      changingText.innerHTML += text.charAt(i);
-      i++;
-      setTimeout(typeName, 300);
-    } else {
-      underText.innerHTML += text.charAt(i);
-      i++;
-      setTimeout(typeName, 200);
-    }
-  };
+  // let i = 0;
+  // const typeName = () => {
+  //   const changingText = document.querySelector(".welcomeText__changing");
+  //   const underText = document.querySelector(".under");
+  //   const text = "Patryk Frontend Developer";
+  //   if (i < 6) {
+  //     changingText.innerHTML += text.charAt(i);
+  //     i++;
+  //     setTimeout(typeName, 300);
+  //   } else {
+  //     underText.innerHTML += text.charAt(i);
+  //     i++;
+  //     setTimeout(typeName, 200);
+  //   }
+  // };
 
-  window.addEventListener("load", typeName);
+  // useEffect(() => {
+  //   window.addEventListener("load", typeName);
+
+  //   return () => window.removeEventListener("load", typeName, true);
+  // }, [typeName]);
   // End of typing name function
 
   const contactHandler = () => {
@@ -42,8 +46,8 @@ const Header = () => {
       <Nav />
       <div className="header__content">
         <h1 className="header__content-welcomeText">
-          Hello, I'm <span className="welcomeText__changing"></span>
-          <p className="under"></p>
+          Hello, I'm <span className="welcomeText__changing">Patryk</span>
+          <p className="under">Frontend Developer</p>
         </h1>
         <div className="header__content-socials__wrapper">
           <a

@@ -24,10 +24,12 @@ const Slider = () => {
             state: {
               images: fbImages,
               title: "Facebook App Clone",
-              photo_1_desc: "Test description 1",
-              photo_2_desc: "Test description 2",
-              photo_3_desc: "Test description 3",
-              photo_4_desc: "Test description 4",
+              descriptions: [
+                "Facebook description 1",
+                "Facebook description 2",
+                "Facebook description 3",
+                "Facebook description 4",
+              ],
             },
           }}
         >
@@ -42,10 +44,12 @@ const Slider = () => {
             state: {
               images: whatsappImages,
               title: "Whatsapp Clone",
-              photo_1_desc: "Test description 1",
-              photo_2_desc: "Test description 2",
-              photo_3_desc: "Test description 3",
-              photo_4_desc: "Test description 4",
+              descriptions: [
+                "Whatsapp description 1",
+                "Whatsapp description 2",
+                "Whatsapp description 3",
+                "Whatsapp description 4",
+              ],
             },
           }}
         >
@@ -60,10 +64,12 @@ const Slider = () => {
             state: {
               images: airbnbImages,
               title: "Airbnb App Clone",
-              photo_1_desc: "Test description 1",
-              photo_2_desc: "Test description 2",
-              photo_3_desc: "Test description 3",
-              photo_4_desc: "Test description 4",
+              descriptions: [
+                "Airbnb description 1",
+                "Airbnb description 2",
+                "Airbnb description 3",
+                "Airbnb description 4",
+              ],
             },
           }}
         >
@@ -78,10 +84,12 @@ const Slider = () => {
             state: {
               images: huluImages,
               title: "Hulu App Clone",
-              photo_1_desc: "Test description 1",
-              photo_2_desc: "Test description 2",
-              photo_3_desc: "Test description 3",
-              photo_4_desc: "Test description 4",
+              descriptions: [
+                "Hulu description 1",
+                "Hulu description 2",
+                "Hulu description 3",
+                "Hulu description 4",
+              ],
             },
           }}
         >
