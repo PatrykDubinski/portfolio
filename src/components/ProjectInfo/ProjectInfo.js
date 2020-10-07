@@ -9,8 +9,6 @@ import { ReactComponent as ArrowDown } from "../../assets/images/down-arrow-svgr
 const ProjectInfo = () => {
   const history = useHistory();
   const { images, title, descriptions } = history.location.state;
-  console.log(history);
-  console.log(descriptions);
 
   let counter = 1;
 
@@ -19,6 +17,8 @@ const ProjectInfo = () => {
     const slideImages = document.querySelectorAll(
       ".projectInfo__wrapper-slide img"
     );
+    console.log(slideImages);
+    console.log(counter);
     const size = slide.offsetHeight;
     slide.style.transform = "translateY(" + -size * counter + "px)";
     slide.addEventListener("transitionend", () => {
@@ -97,12 +97,12 @@ const ProjectInfo = () => {
     }, 40000);
   }, []);
 
-  let desc;
-
   const nextImage = () => {
     const slideImages = document.querySelectorAll(
       ".projectInfo__wrapper-slide img"
     );
+    console.log(slideImages);
+    console.log(counter);
     if (counter >= slideImages.length - 1) return;
     const slide = document.querySelector(".projectInfo__wrapper-slide");
     const size = slide.offsetHeight;
@@ -112,6 +112,7 @@ const ProjectInfo = () => {
   };
 
   const prevImage = () => {
+    console.log(counter);
     if (counter <= 0) return;
     const slide = document.querySelector(".projectInfo__wrapper-slide");
     const size = slide.offsetHeight;

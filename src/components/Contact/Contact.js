@@ -11,7 +11,7 @@ const Contact = () => {
   const [emailInput, setEmailInput] = useState("");
   const [subjectInput, setSubjectInput] = useState("");
   const [message, setMessage] = useState("");
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
 
   const sendMessage = (e) => {
     e.preventDefault();
