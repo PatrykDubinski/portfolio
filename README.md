@@ -1,8 +1,13 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live version [https://portfolio-935b6.web.app/](https://portfolio-935b6.web.app/)
+
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install`
+
+Install all dev dependencies and modules
 
 ### `npm start`
 
