@@ -1,4 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live version [https://portfolio-935b6.web.app/](https://portfolio-935b6.web.app/)
+
 
 ## Available Scripts
 
