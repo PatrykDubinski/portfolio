@@ -5,6 +5,10 @@ Live version [https://portfolio-935b6.web.app/](https://portfolio-935b6.web.app/
 
 In the project directory, you can run:
 
+### `npm install`
+
+Install all dev dependencies and modules
+
 ### `npm start`
 
 Runs the app in the development mode.<br />
