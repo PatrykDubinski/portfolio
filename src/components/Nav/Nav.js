@@ -44,7 +44,15 @@ const Nav = () => {
           <NavItem itemName="work">My work</NavItem>
           <NavItem itemName="tech">Technologies</NavItem>
           <NavItem itemName="contact">Contact me</NavItem>
-          <NavItem>Get my CV</NavItem>
+          <li className="li">
+            <a
+              href="https://github.com/PatrykDubinski/CV"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get my CV
+            </a>
+          </li>
         </ul>
       </ScrollAnimation>
       <div

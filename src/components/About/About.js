@@ -45,11 +45,10 @@ const About = () => {
           </ul>
           <p>
             Now I'm still developing my JavaScript and ReactJS skills through
-            making clones of popular websites. You can check my projects in{" "}
-            <a href="/react-router-link">work</a> section below, or get my code
-            from my GitHub profile. I know how to work as a team, I'm learning
-            fast and also I'm looking for a Frontend Developer job, mostly in
-            React.
+            making clones of popular websites. You can check my projects in work
+            section below, or get my code from my GitHub profile. I know how to
+            work as a team, I'm learning fast and also I'm looking for a
+            Frontend Developer job, mostly in React.
           </p>
         </div>
       </ScrollAnimation>

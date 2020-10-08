@@ -35,6 +35,16 @@
   text-decoration: none;
 }
 
+.nav > .smallNav > .smallNav__navItems > .li > a,
+.nav > div > .nav__navItems > .li > a {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+.nav.sticky > div > .nav__navItems > .li > a {
+  color: black;
+}
+
 .nav > .smallNav > .smallNav__navItems > .li:hover {
   cursor: pointer;
   background-color: #288fa7;

@@ -109,6 +109,11 @@
   cursor: pointer;
 }
 
+.header__content-buttons__wrapper > div > .transparentBtn > a {
+  color: #48dbdf;
+  text-decoration: none;
+}
+
 .header__content-buttons__wrapper > div > .transparentBtn:hover {
   background-color: var(--main-blue);
   border: none;

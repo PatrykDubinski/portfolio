@@ -48,7 +48,7 @@ const Header = () => {
               <GitHubIcon />
             </a>
             <a
-              href="https://pl.linkedin.com/"
+              href="https://www.linkedin.com/in/patryk-dubi%C5%84ski-6154331b9/"
               alt="linkedin"
               target="_blank"
               rel="noopener noreferrer"
@@ -64,7 +64,15 @@ const Header = () => {
             </button>
           </ScrollAnimation>
           <ScrollAnimation animateIn="animate__bounceInRight" delay={2000}>
-            <button className="transparentBtn">Download CV</button>
+            <button className="transparentBtn">
+              <a
+                href="https://github.com/PatrykDubinski/CV"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download CV
+              </a>
+            </button>
           </ScrollAnimation>
         </div>
       </div>
