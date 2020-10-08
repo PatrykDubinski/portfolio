@@ -123,6 +123,9 @@ const ProjectInfo = () => {
 
   return (
     <div className="projectInfo">
+      <h2 className="go_back" onClick={() => history.push("/")}>
+        Go back
+      </h2>
       <h2>{title}</h2>
       <div className="wrapper">
         <div className="projectInfo__wrapper">

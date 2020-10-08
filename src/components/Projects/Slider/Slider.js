@@ -5,16 +5,28 @@ import { Link } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
-import facebookImg from "../../../assets/images/facebook.png";
-import airbnbImg from "../../../assets/images/airbnb.png";
-import whatsappImg from "../../../assets/images/whatsapp.png";
-import huluImg from "../../../assets/images/hulu.png";
+import fb1 from "../../../assets/images/fb1.png";
+import fb4 from "../../../assets/images/fb2.png";
+import fb3 from "../../../assets/images/fb3.png";
+import fb2 from "../../../assets/images/fb4.png";
+import airbnb1 from "../../../assets/images/airbnb1.png";
+import airbnb2 from "../../../assets/images/airbnb2.png";
+import airbnb3 from "../../../assets/images/airbnb3.png";
+import airbnb4 from "../../../assets/images/airbnb4.png";
+import whatsapp1 from "../../../assets/images/whatsapp1.png";
+import whatsapp2 from "../../../assets/images/whatsapp2.png";
+import whatsapp3 from "../../../assets/images/whatsapp3.png";
+import whatsapp4 from "../../../assets/images/whatsapp4.png";
+import hulu1 from "../../../assets/images/hulu1.png";
+import hulu2 from "../../../assets/images/hulu2.png";
+import hulu3 from "../../../assets/images/hulu3.png";
+import hulu4 from "../../../assets/images/hulu4.png";
 
 const Slider = () => {
-  const fbImages = [facebookImg, airbnbImg, whatsappImg, huluImg];
-  const huluImages = [huluImg, airbnbImg, whatsappImg, facebookImg];
-  const whatsappImages = [whatsappImg, facebookImg, airbnbImg, huluImg];
-  const airbnbImages = [airbnbImg, facebookImg, whatsappImg, huluImg];
+  const fbImages = [fb1, fb2, fb3, fb4];
+  const huluImages = [hulu1, hulu2, hulu3, hulu4];
+  const whatsappImages = [whatsapp1, whatsapp2, whatsapp3, whatsapp4];
+  const airbnbImages = [airbnb1, airbnb2, airbnb3, airbnb4];
   return (
     <div className="slider">
       <Carousel infiniteLoop>
@@ -34,7 +46,7 @@ const Slider = () => {
           }}
         >
           <div>
-            <img src={facebookImg} alt="Facebook" />
+            <img src={fb1} alt="Facebook" />
             <p className="legend">Facebook</p>
           </div>
         </Link>
@@ -54,7 +66,7 @@ const Slider = () => {
           }}
         >
           <div>
-            <img src={whatsappImg} alt="Whatsapp" />
+            <img src={whatsapp1} alt="Whatsapp" />
             <p className="legend">Whatsapp</p>
           </div>
         </Link>
@@ -74,7 +86,7 @@ const Slider = () => {
           }}
         >
           <div>
-            <img src={airbnbImg} alt="airbnb" />
+            <img src={airbnb1} alt="airbnb" />
             <p className="legend">Airbnb</p>
           </div>
         </Link>
@@ -94,7 +106,7 @@ const Slider = () => {
           }}
         >
           <div>
-            <img src={huluImg} alt="hulu" />
+            <img src={hulu1} alt="hulu" />
             <p className="legend">Hulu</p>
           </div>
         </Link>
