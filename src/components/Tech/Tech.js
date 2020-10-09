@@ -20,7 +20,7 @@ const Tech = () => {
   return (
     <section className="tech" id="tech">
       <h2>Technologies I'm Using</h2>
-      <ScrollAnimation animateIn="animate__fadeInUp" duration={2}>
+      <ScrollAnimation animateIn="animate__fadeIn" duration={2}>
         <div className="tech__wrapper">
           <SingleTech tech="git" img={<FaGitAlt />} />
           <SingleTech tech="html" img={<FaHtml5 />} />

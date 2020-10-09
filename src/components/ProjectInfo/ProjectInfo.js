@@ -1,16 +1,39 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "./ProjectInfo.css";
 
 import { useHistory } from "react-router-dom";
+import { TimelineMax } from "gsap";
 
 import { ReactComponent as ArrowUp } from "../../assets/images/up-arrow-svgrepo-com.svg";
 import { ReactComponent as ArrowDown } from "../../assets/images/down-arrow-svgrepo-com.svg";
 
 const ProjectInfo = () => {
+  const myRefBG = useRef(null);
+  const myRefSlides = useRef(null);
+  const myRefBackBtn = useRef(null);
+
   const history = useHistory();
   const { images, title, descriptions } = history.location.state;
 
   let counter = 1;
+
+  useEffect(() => {
+    const animation = new TimelineMax();
+    animation
+      .fromTo(myRefBG.current, 1, { x: "-100vw" }, { x: "0" })
+      .fromTo(
+        myRefBackBtn.current,
+        1,
+        { y: "-100", opacity: "0", delay: 2 },
+        { y: "0", opacity: "1" }
+      )
+      .fromTo(
+        myRefSlides.current,
+        1,
+        { y: "100%", opacity: "0", delay: 1 },
+        { y: "0", opacity: "1" }
+      );
+  }, []);
 
   useEffect(() => {
     const slide = document.querySelector(".projectInfo__wrapper-slide");
@@ -122,12 +145,16 @@ const ProjectInfo = () => {
   };
 
   return (
-    <div className="projectInfo">
-      <h2 className="go_back" onClick={() => history.push("/")}>
+    <div className="projectInfo" ref={myRefBG}>
+      <h2
+        ref={myRefBackBtn}
+        className="go_back"
+        onClick={() => history.push("/")}
+      >
         Go back
       </h2>
       <h2>{title}</h2>
-      <div className="wrapper">
+      <div className="wrapper" ref={myRefSlides}>
         <div className="projectInfo__wrapper">
           <div onClick={prevImage} className="arrowUp">
             <ArrowUp />

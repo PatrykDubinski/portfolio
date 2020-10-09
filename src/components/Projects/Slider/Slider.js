@@ -27,6 +27,7 @@ const Slider = () => {
   const huluImages = [hulu1, hulu2, hulu3, hulu4];
   const whatsappImages = [whatsapp1, whatsapp2, whatsapp3, whatsapp4];
   const airbnbImages = [airbnb1, airbnb2, airbnb3, airbnb4];
+
   return (
     <div className="slider">
       <Carousel infiniteLoop>
