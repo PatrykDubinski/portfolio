@@ -21,12 +21,17 @@ import hulu1 from "../../../assets/images/hulu1.png";
 import hulu2 from "../../../assets/images/hulu2.png";
 import hulu3 from "../../../assets/images/hulu3.png";
 import hulu4 from "../../../assets/images/hulu4.png";
+import amz1 from "../../../assets/images/amz1.png";
+import amz2 from "../../../assets/images/amz2.png";
+import amz3 from "../../../assets/images/amz3.png";
+import amz4 from "../../../assets/images/amz4.png";
 
 const Slider = () => {
   const fbImages = [fb1, fb2, fb3, fb4];
   const huluImages = [hulu1, hulu2, hulu3, hulu4];
   const whatsappImages = [whatsapp1, whatsapp2, whatsapp3, whatsapp4];
   const airbnbImages = [airbnb1, airbnb2, airbnb3, airbnb4];
+  const amazonImages = [amz1, amz2, amz3, amz4];
 
   return (
     <div className="slider">
@@ -109,6 +114,26 @@ const Slider = () => {
           <div>
             <img src={hulu1} alt="hulu" />
             <p className="legend">Hulu</p>
+          </div>
+        </Link>
+        <Link
+          to={{
+            pathname: "/projects/amazon",
+            state: {
+              images: amazonImages,
+              title: "Amazon Clone App",
+              descriptions: [
+                "It is app made as much as possible to look exactly like known to everyone Amazon.",
+                "You can add items to basket which updates live using React Context API.",
+                "You can remove items from basket or proceed to checkout. Also You have total amount of Your items in basket visible. Payment is provided via Stripe. You can see Your orders on Orders page.",
+                "Registering and login through email is included via firebase.",
+              ],
+            },
+          }}
+        >
+          <div>
+            <img src={amz1} alt="amazon" />
+            <p className="legend">Amazon</p>
           </div>
         </Link>
       </Carousel>
